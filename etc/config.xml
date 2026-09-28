@@ -3,8 +3,9 @@
     <default>
         <checkout>
             <guard>
-                <block_rest_payment_routes>0</block_rest_payment_routes>
                 <payment_failures_limit>0</payment_failures_limit>
+                <payment_failures_action>deactivate</payment_failures_action>
+                <block_rest_payment_routes></block_rest_payment_routes>
             </guard>
         </checkout>
     </default>
