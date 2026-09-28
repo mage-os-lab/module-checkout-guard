@@ -1,0 +1,7 @@
+{
+    "quote": {
+        "column": {
+            "payment_failures": true
+        }
+    }
+}

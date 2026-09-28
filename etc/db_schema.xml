@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="quote" resource="checkout" engine="innodb" comment="Sales Flat Quote">
+        <column xsi:type="smallint" name="payment_failures" unsigned="true" nullable="true" comment="Failed payment attempts on this quote"/>
+    </table>
+</schema>

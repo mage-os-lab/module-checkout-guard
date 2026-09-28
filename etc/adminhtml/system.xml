@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="checkout">
+            <group id="guard" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Checkout Guard</label>
+                <field id="block_rest_payment_routes" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Block REST Payment Routes</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Answer 404 on the REST routes that set a payment or place an order (guest-carts and carts/mine: payment-information, set-payment-information, selected-payment-method, order). Enable when the storefront checkout places orders without these routes, for example Hyva Checkout. Card-testing bots use them to skip the checkout form and its reCAPTCHA.</comment>
+                </field>
+                <field id="payment_failures_limit" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0" canRestore="1">
+                    <label>Failed Payment Attempts per Cart</label>
+                    <validate>validate-digits</validate>
+                    <comment>Deactivate a cart after this many failed payment attempts, on every order path (storefront, REST, GraphQL). 0 disables the limit. Each failure and each deactivation is written to var/log/checkout_guard.log.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
